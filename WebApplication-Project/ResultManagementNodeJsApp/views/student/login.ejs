@@ -1,0 +1,36 @@
+<a href="/" class="btn btn-info" style="margin-top: 5px">Back</a>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 mx-auto mt-4">
+      <div class="card shadow">
+        <h3>Search Student</h3>
+        <% if (error) { %>
+          <div class="px-5">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <strong>
+                <%= error %>
+              </strong>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          </div>
+
+          <% } %>
+            <div class="mx-auto">
+              <form method="POST" class="teachForm">
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Roll no :
+                  </label>
+                  <input type="number" name="roll" class="form-control" id="exampleInputPassword1" />
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Date of Birth :
+                  </label>
+                  <input type="date" name="dob" class="form-control" id="exampleInputPassword1" />
+                </div>
+                <a><button type="submit" class="btn btn-primary">Search</button></a>
+              </form>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<a href="/teacher/option" class="btn btn-info" style="margin-top:5px;">Back</a>
+<h4 class="">All Students</h4>
+<div class="tableDiv">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Roll No.</th>
+        <th scope="col">Name</th>
+        <th scope="col">Date of Birth</th>
+        <th scope="col">Score</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% student.forEach(element=> { %>
+        <tr class="head">
+          <td>
+            <%= element.roll %>
+          </td>
+          <td>
+            <%= element.name %>
+          </td>
+          <td>
+            <%= element.dob.toString().substring(0,15) %>
+          </td>
+          <td>
+            <%= element.score %>
+          </td>
+          <td>
+            <a href="/teacher/edit/<%= element._id %> "><i class="fa fa-edit mx-2"
+                style="font-size:24px;color:rgb(80, 196, 239);"></i></a>
+            <a href="/teacher/delete/<%= element._id %> "><i class="fa fa-trash"
+                style="font-size:24px;color:red;"></i></a>
+          </td>
+        </tr>
+        <%}) %>
+    </tbody>
+  </table>
+</div>
