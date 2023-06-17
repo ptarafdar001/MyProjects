@@ -1,0 +1,34 @@
+.profileContainer {
+  background-color: #f1f1f1; /* Add a subtle background color */
+  padding: 2rem; /* Add some padding to the container */
+}
+
+.profileImage {
+  border: 2px solid #fff; /* Add a white border to the profile image */
+}
+
+.profileName {
+  font-family: "Montserrat", sans-serif; /* Use the Montserrat font for the name */
+  color: #333; /* Use a dark gray color for the name */
+  margin-bottom: 1rem; /* Add some margin to the bottom of the name */
+}
+
+.profileBio,
+.profileLocation,
+.profileDate {
+  font-family: "Open Sans", sans-serif; /* Use the Open Sans font for the bio, location and date */
+  color: #666; /* Use a light gray color for the bio, location and date */
+  margin-bottom: 1rem; /* Add some margin to the bottom of the bio, location and date */
+}
+
+.editBtn {
+  font-family: "Roboto", sans-serif; /* Use the Roboto font for the button */
+  background-color: #57b846; /* Use a green color for the button */
+  border-color: #57b846; /* Use the same green color for the border */
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out; /* Add a transition for hover effect */
+}
+
+.editBtn:hover {
+  background-color: #4da03e; /* Change the background color on hover */
+  border-color: #4da03e; /* Change the border color on hover */
+}
