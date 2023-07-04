@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { RAPID_API_KEY } from '@env';
-import { RAPID_API_KEY2 } from '@env';
 
-const rapidApiKey1 = RAPID_API_KEY;
-const rapidApiKey2 = RAPID_API_KEY2;
+//import { RAPID_API_KEY } from '@env';
+//import { RAPID_API_KEY2 } from '@env';
+
+//const rapidApiKey1 = RAPID_API_KEY;
+//const rapidApiKey2 = RAPID_API_KEY2;
 
 const useFetch = (endpoint, query) => {
   const [data, setData] = useState([]);
@@ -15,7 +16,7 @@ const useFetch = (endpoint, query) => {
     method: 'GET',
     url: `https://jsearch.p.rapidapi.com/${endpoint}`,
     headers: {
-      'X-RapidAPI-Key': rapidApiKey1,
+      'X-RapidAPI-Key': `${process.env.RAPID_API_KEY}`,
       'X-RapidAPI-Host': 'jsearch.p.rapidapi.com',
     },
     params: { ...query },
@@ -23,7 +24,7 @@ const useFetch = (endpoint, query) => {
 
   // const options = {
   //   method: "GET",
-  //   url: "https://indeed12.p.rapidapi.com/job/b762b8d1132bd276",
+  //   url: `https://indeed12.p.rapidapi.com/${endpoint}`,
   //   headers: {
   //     "content-type": "application/octet-stream",
   //     "X-RapidAPI-Key": rapidApiKey2,
